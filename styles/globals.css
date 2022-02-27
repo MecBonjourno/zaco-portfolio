@@ -4,6 +4,8 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background: #010101;
+  color: #fff;
 }
 
 a {
@@ -13,4 +15,125 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.art {
+  /* position: absolute; */
+  color: #e6bc4a;
+  /* margin: 50px 0; */
+  /* background-image: url("../public/card1.jpg"); */
+  /* background-size: cover; */
+  /* height: 300px; */
+  /* background-repeat: no-repeat; */
+  /* max-width: 35ch; */
+  border-style: solid;
+  border-width: 10px;
+  border-color: #e6bc4a;
+  overflow: hidden;
+  border-radius: 0.1rem;
+  transition: transform 700ms ease;
+}
+
+.art:hover,
+.art:focus-within {
+  transform: scale(1.01);
+}
+
+.art-content {
+  --padding: 1.5em;
+  padding: var(--padding);
+  height: 100%;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.018644957983193322) 100%
+  );
+}
+
+@media (hover) {
+  .art-content {
+    transform: translateY(100%);
+    transition: transform 700ms ease;
+  }
+
+  .art-content > * {
+    opacity: 0;
+    transition: opacity 600ms linear;
+  }
+
+  .art:hover .art-content,
+  .art:focus-within .art-content {
+    transform: translateY(0);
+    transition-delay: 200ms;
+  }
+
+  .art:hover .art-content > * {
+    opacity: 1;
+  }
+}
+
+/* .art-content > *:not(.art-title) podia ser usado mas nois eh diferenciado */
+.art-content > * {
+  opacity: 0;
+  transition: opacity 600ms linear;
+}
+
+.art:hover .art-content,
+.art:focus-within .art-content {
+  transform: translateY(0);
+  transition-delay: 200ms;
+}
+
+.art:focus-within .art-content {
+  transition-duration: 0ms;
+}
+
+.art:hover .art-content > * {
+  opacity: 1;
+}
+
+.art-title {
+  position: relative;
+  width: max-content;
+}
+
+.art:hover .art-title::after {
+  transform: scaleX(1);
+}
+
+.art-title::after {
+  content: "";
+  position: absolute;
+  left: calc(var(--padding) * -1);
+  bottom: 0;
+  height: 4px;
+  width: calc(100% + var(--padding));
+  background: #e6bc4a;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 700ms ease;
+}
+
+.art-button {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  color: #ca223b;
+  background-color: #e6bc4a;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.1rem;
+}
+
+.art-button:hover,
+.art-button:focus {
+  background-color: #b8922b;
+}
+
+.art-play {
+  width: 100%;
+  height: 100%;
+  display: hidden;
+  font-size: 0;
 }
