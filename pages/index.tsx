@@ -19,18 +19,68 @@ const getItems = () =>
 const work = [
   {
     id: "0",
-    title: "Test",
-    image: "card1.jpg",
+    title: "QueRy Mobile",
+    image: "card1.png",
   },
   {
     id: "1",
-    title: "Test",
+    title: "The Za Co",
     image: "card2.JPG",
   },
   {
     id: "2",
-    title: "Test",
+    title: "PAZ Plan",
     image: "card3.JPG",
+  },
+  {
+    id: "3",
+    title: "Rise Verticalis",
+    image: "card5.png",
+  },
+  {
+    id: "4",
+    title: "Za Clo",
+    image: "card6.png",
+  },
+  {
+    id: "5",
+    title: "Adicom",
+    image: "card7.png",
+  },
+  {
+    id: "6",
+    title: "Boreal Sistemas de Limpeza",
+    image: "card8.png",
+  },
+  {
+    id: "7",
+    title: "NotOvO",
+    image: "card9.png",
+  },
+  {
+    id: "8",
+    title: "Supply Hub",
+    image: "card10.png",
+  },
+  {
+    id: "9",
+    title: "Electron",
+    image: "card10.png",
+  },
+  {
+    id: "10",
+    title: "Web3",
+    image: "card11.jpeg",
+  },
+  {
+    id: "11",
+    title: "ByLoot",
+    image: "card10.png",
+  },
+  {
+    id: "12",
+    title: "Dark Vape Shop",
+    image: "card12.png",
   },
 ];
 
